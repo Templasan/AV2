@@ -1,0 +1,231 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.section-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #1A237E;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-col {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.image-col {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-field {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.input-field:disabled {
+  background-color: #f5f5f5;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1A237E;
+  color: #fff;
+}
+.btn-primary:hover { background-color: #0d144c; }
+
+.btn-success {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.btn-success:hover { background-color: #3e8e41; }
+
+.btn-danger {
+  background-color: #f44336;
+  color: #fff;
+}
+.btn-danger:hover { background-color: #c12d24; }
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.image-upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.image-upload-box:hover {
+  border-color: #1A237E;
+}
+
+.upload-icon { font-size: 2rem; color: #999; }
+.upload-text { margin-top: 0.5rem; font-size: 0.9rem; color: #555; }
+.upload-caption { font-size: 0.75rem; color: #888; }
+
+.alert-warning {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  margin-bottom: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.aircraft-block {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+
+.aircraft-block:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.aircraft-header {
+  font-weight: bold;
+  color: #1A237E;
+  font-size: 1rem;
+}
+
+.aircraft-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.aircraft-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.aircraft-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.aircraft-section {
+  margin-top: 0.5rem;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #f44336;
+}
+
+@media (max-width: 1024px) {
+  .grid { flex-direction: column; }
+  .form-col, .image-col { flex: 1 1 100%; }
+  .aircraft-content { flex-direction: column; align-items: center; }
+  .aircraft-img { width: 100%; max-width: 200px; height: auto; }
+}

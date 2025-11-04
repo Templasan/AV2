@@ -1,0 +1,608 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.section-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #1A237E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-col {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.image-col {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-field {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.input-field:disabled {
+  background-color: #f5f5f5;
+}
+
+.small-input {
+  padding: 0.4rem;
+  width: 120px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1A237E;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0d144c;
+}
+
+.btn-success {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #3e8e41;
+}
+
+.btn-danger {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c12d24;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.image-upload-box {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.image-upload-box:hover {
+  border-color: #1A237E;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #999;
+}
+
+.upload-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.upload-caption {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.alert-warning {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  margin-bottom: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.aircraft-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.aircraft-block {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.aircraft-header {
+  width: 100%;
+  font-weight: bold;
+  color: #1A237E;
+  margin-bottom: 0.5rem;
+}
+
+.aircraft-content {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.aircraft-details {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aircraft-details .aircraft-section {
+  margin-top: 0.5rem;
+}
+
+.aircraft-details ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.aircraft-details li {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .form-col,
+  .image-col {
+    flex: 1 1 100%;
+  }
+
+  .aircraft-content {
+    flex-direction: column;
+  }
+
+  .aircraft-details {
+    flex: 1 1 100%;
+  }
+}
+
+.aircraft-img {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.modal-img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.aircraft-img {
+  cursor: pointer; 
+  max-width: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal-img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.aircraft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.aircraft-block {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.aircraft-header {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1A237E;
+}
+
+.aircraft-content {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.aircraft-img {
+  cursor: pointer;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.aircraft-details {
+  flex: 1;
+}
+
+.aircraft-section {
+  margin-top: 0.5rem;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal-img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.modal-content {
+  position: relative;
+  display: inline-block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.home-main {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.home-main.closed {
+  margin-left: 88px; 
+}
+
+.home-main.open {
+  margin-left: 250px; 
+}
+
+@media (max-width: 1024px) {
+  .home-main {
+    margin-left: 88px; 
+  }
+
+  .home-container {
+    padding: 1rem;
+  }
+
+  .grid {
+    flex-direction: column;
+  }
+
+  .form-col,
+  .image-col {
+    flex: 1 1 100%;
+  }
+
+  .aircraft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aircraft-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aircraft-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .aircraft-details {
+    width: 100%;
+  }
+
+  .sidebar .toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .section-card {
+    padding: 1rem;
+  }
+
+  .input-field,
+  .small-input,
+  button {
+    font-size: 0.85rem;
+  }
+
+  .aircraft-block {
+    padding: 0.75rem;
+  }
+
+  .modal-img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 5px;
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .form-col {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .form-col .input-field[type="password"],
+  .form-col .input-field[placeholder*="DELETAR"] {
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+  }
+
+  .form-col button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-col {
+    gap: 0.5rem;
+  }
+
+  .input-field,
+  button {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .btn-danger {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 280px;
+}
+
+.form-col input,
+.form-col button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-col {
+    width: 100%;
+  }
+
+  .form-col input,
+  .form-col button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-col {
+    gap: 0.6rem;
+  }
+
+  .form-col input,
+  .form-col button {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .form-col button {
+    text-align: center;
+  }
+}

@@ -1,0 +1,134 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.section-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #1A237E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-col {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-field {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1A237E;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0d144c;
+}
+
+.btn-success {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn-success:hover {
+  background-color: #3e8e41;
+}
+
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #c12d24;
+}
+
+.alert-warning {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.relatorios-results {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.relatorio-block {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fafafa;
+  transition: box-shadow 0.2s;
+}
+
+.relatorio-block:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.relatorio-header {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1A237E;
+}
+
+.relatorio-content {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .form-col {
+    flex: 1 1 100%;
+  }
+}
