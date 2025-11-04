@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# ✈️ Aerocode - Sistema de Gestão para Produção de Aeronaves
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório oficial da **Aerocode**, uma empresa especializada no desenvolvimento de software para gestão da produção de aeronaves.
 
-Currently, two official plugins are available:
+Este projeto é o nosso **Produto Mínimo Viável (MVP)**: um sistema de **Single Page Application (SPA)** robusto e eficiente, desenvolvido para simular e gerenciar as principais operações do ciclo de produção de uma aeronave.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-----
 
-## React Compiler
+## 🎯 Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A Aerocode nasceu para atender às necessidades da indústria aeronáutica, fornecendo soluções de software para otimizar a complexa cadeia de produção.
 
-## Expanding the ESLint configuration
+Este SPA foi projetado com uma interface de usuário rica (UI) em React para simular a gestão de diversas áreas:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  * **Dados Mockados:** Para o propósito do MVP, todos os dados de Aeronaves, Peças, Etapas, Testes, Relatórios e Funcionários são armazenados em *mock data* (dados simulados) nos componentes React, sem persistência em banco de dados ou arquivos externos no momento.
+  * **Simulação de Login:** A tela de Login usa credenciais fixas (`admin`/`1234`) para simular o acesso à área restrita.
+  * **Componentes de Layout:** Utiliza um componente `Sidebar` para navegação entre as diferentes seções do sistema.
+  * Documentação de WIREFRAME e WIREFLOW estão na pasta raiz em pdf.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-----
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Principais Funcionalidades (Módulos)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+A aplicação inclui as seguintes páginas (rotas) de gestão:
+
+1.  **Home (`/home`):** Painel inicial que exibe um resumo das últimas atividades e relatórios recentes.
+2.  **Funcionários (`/funcionarios`):** Módulo de Gestão de Equipe (CRUD Básico de Busca/Cadastro/Edição/Deleção simulado).
+3.  **Aeronaves (`/aeronaves`):** Módulo de Gestão de Aeronaves (CRUD Básico simulado) com visualização detalhada de peças, etapas e testes associados. Lida com tipos `COMERCIAL` (ex: Embraer E195-E2) e `MILITAR` (ex: Embraer KC-390).
+4.  **Peças (`/pecas`):** Gerenciamento de Peças (CRUD Básico simulado), incluindo tipo (`NACIONAL`/`IMPORTADA`), fornecedor e status.
+5.  **Etapas (`/etapas`):** Controle de Etapas de Produção (CRUD Básico simulado) com status (`PENDENTE`, `EM ANDAMENTO`, `CONCLUÍDA`) e associação de funcionários.
+6.  **Testes (`/testes`):** Registro de Testes (CRUD Básico simulado), como `ELÉTRICO` e `HIDRÁULICO`, com resultados (`APROVADO`/`REPROVADO`) e responsável.
+7.  **Relatórios (`/relatorios`):** Módulo de Relatórios (Busca/Cadastro/Deleção simulado) para acompanhar o status e o histórico de produção.
+
+-----
+
+## 💻 Tecnologias Utilizadas
+
+O projeto é um frontend moderno de alto desempenho, utilizando as seguintes tecnologias:
+
+  * **Frontend Principal:** [React](https://react.dev/)
+  * **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+  * **Bundler/Dev Tool:** [Vite](https://vitejs.dev/)
+  * **Roteamento:** `react-router-dom`
+  * **Ícones:** [Boxicons](https://boxicons.com/)
+
+-----
+
+## 🔧 Pré-requisitos
+
+Certifique-se de ter os seguintes softwares instalados para rodar o ambiente de desenvolvimento:
+
+  * **Node.js** (versão 18.x ou superior)
+  * **NPM** (vem com o Node.js) ou **Yarn**
+
+-----
+
+## 🚀 Manual de Instalação e Execução
+
+Para iniciar o projeto em modo de desenvolvimento local:
+
+```bash
+# 1. Clone o repositório (ou descompacte os arquivos)
+git clone <URL_DO_REPOSITORIO>
+
+# 2. Acesse o diretório
+cd av2
+
+# 3. Instale as dependências
+npm install
+# ou
+yarn install
+
+# 4. Execute a aplicação em modo de desenvolvimento (Vite)
+npm run dev
+# ou
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação estará acessível em `http://localhost:<PORTA_VITE>`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para construir a versão de produção:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# 5. Compile e gere os arquivos de produção
+npm run build
+# ou
+yarn build
+
+# 6. Para visualizar a build de produção localmente (opcional)
+npm run preview
+# ou
+yarn preview
 ```
