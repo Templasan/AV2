@@ -16,6 +16,7 @@ Este SPA foi projetado com uma interface de usuário rica (UI) em React para sim
   * **Simulação de Login:** A tela de Login usa credenciais fixas (`admin`/`1234`) para simular o acesso à área restrita.
   * **Componentes de Layout:** Utiliza um componente `Sidebar` para navegação entre as diferentes seções do sistema.
   * Documentação de WIREFRAME e WIREFLOW estão na pasta raiz em pdf.
+  * (https://github.com/Templasan/AV2/blob/main/Wireframe_Wireflow.pdf)
 
 -----
 
