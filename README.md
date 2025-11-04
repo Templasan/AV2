@@ -79,16 +79,3 @@ yarn dev
 
 A aplicação estará acessível em `http://localhost:<PORTA_VITE>`.
 
-Para construir a versão de produção:
-
-```bash
-# 5. Compile e gere os arquivos de produção
-npm run build
-# ou
-yarn build
-
-# 6. Para visualizar a build de produção localmente (opcional)
-npm run preview
-# ou
-yarn preview
-```
